@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./components/styles/style.css">
+    <link rel="shortcut icon" href="./components/res/icon/task.svg" type="image/x-icon">
+    <title>To-Do Tasks</title>
+</head>
+<body>
+    <div class="background-content" id="background-content">
+        <header>
+            <div class="left-side">
+                <img src="./components/res/icon/task.svg" alt="Tarefas">
+                <h1>To-Do Tasks</h1>
+            </div>
+            <div class="right-side">
+                <button><img src="./components/res/icon/more.svg" alt="Adicionar"></button>
+            </div>
+        </header>
+        <main class="all-done-main" style="display: none;">
+            <img src="./components/res/icon/ok-symbol.svg" alt="Tudo Feito">
+            <b>Todas as suas tarefas estão feitas! Adicione uma nova tarefa no +.</b>
+        </main>
+        <main class="tasker-listing">
+            <div class="today-list pad-hor">
+                <div class="title-list"><img src="./components/res/icon/hourglass.svg" alt="Ampulheta">Para Hoje</div>
+                <div class="task-object">
+                    <div class="left-side-tsk-obj">
+                        <b>Titulo da tarefa</b>
+                        <i>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos, est! Ipsum eos atque ducimus libero. Beatae rerum aliquid voluptates dolor provident ullam. Repudiandae inventore delectus architecto nesciunt autem quod harum.</i>
+                    </div>
+                    <div class="right-side-tsk-obj">
+                        <div class="rsto-txt">
+                            <b>Hoje</b>
+                            <i>29/07/2025</i>
+                        </div>
+                        <img src="./components/res/icon/timer.svg" alt="Temporizador">
+                        <img src="./components/res/icon/trash.svg" alt="Lixeira">
+                    </div>
+                </div>
+            </div>
+            <div class="tomorrow-list pad-hor">
+                <div class="title-list"><img src="./components/res/icon/hourglass.svg" alt="Ampulheta">Amanhã</div>
+            </div>
+            <div class="weekly-list pad-hor">
+                <div class="title-list"><img src="./components/res/icon/month.svg" alt="Ampulheta">Esta Semana</div>
+            </div>
+            <div class="alltime-list pad-hor">
+                <div class="title-list"><img src="./components/res/icon/month.svg" alt="Ampulheta">Todo o Tempo</div>
+            </div>
+        </main>
+    </div>
+    <div class="create-pop">
+        <b>Criar nova Tarefa</b>
+        <p>Titulo</p>
+        <input type="text" id="title-set">
+        <p>Descrição</p>
+        <input type="text" id="desc-set">
+        <p>Data</p>
+        <input type="date" name="date-set" id="date-set">
+        <p><input type="checkbox" name="activate-time" id="activate-time">Horario</p>
+        <input type="time" name="time-set" id="time-set" style="display: none;">
+        <button id="button-set">Criar</button>
+    </div>
+</body>
+</html>

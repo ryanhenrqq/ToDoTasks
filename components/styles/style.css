@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0 auto;
+    font-family: "Montserrat", sans-serif;
+}
+body {
+    background-color: #fff6cd;
+}
+.background-content {
+    width: 100%;
+    height: 100%;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 12px;
+    width: 100%;
+    height: 6vh;
+    box-shadow: 2px 2px 2px black;
+}
+.left-side, .right-side {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.left-side:hover {
+    cursor: pointer;
+}
+.right-side {
+    margin-right: 24px;
+}
+.left-side img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+.left-side h1 {
+    font-size: 42px;
+}
+.right-side button {
+    border: none;
+    padding: 8px;
+    border-radius: 16px;
+}
+.right-side button:hover {
+    cursor: pointer;
+}
+.right-side button img{
+    width: 42px;
+    height: 42px;
+}
+
+.all-done-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    gap: 16px;
+}
+.all-done-main img {
+    width: 140px;
+    height: 140px;
+}
+.all-done-main b {
+    font-size: 24px;
+}
+
+.tasker-listing {
+    padding: 24px;
+    gap: 18px;
+}
+.title-list {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-size: 36px;
+    font-weight: bolder;
+    padding-bottom: 14px;
+}
+.title-list img {
+    width: 50px;
+    height: 50px;
+}
+.pad-hor {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.task-object {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #ffed9c;
+    padding: 14px;
+    border-radius: 24px;
+}
+.left-side-tsk-obj {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 90%;
+}
+.right-side-tsk-obj {
+    display: flex;
+    flex-direction: row;
+}
+.left-side-tsk-obj b {
+    font-size: 24px;
+}
+.left-side-tsk-obj i {
+    font-size: 19px;
+}
+.left-side-tsk-obj b, .left-side-tsk-obj i {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.rsto-txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+}
+.right-side-tsk-obj img{
+    width: 40px;
+    height: 40px;
+    margin-left: 12px;
+}
+.right-side-tsk-obj img:hover {
+    cursor: pointer;
+}
+
+.create-pop {
+    background-color: #fff6cd;
+    border: solid 1px black;
+    border-radius: 24px;
+    width: 420px;
+    position: absolute;
+    padding: 2rem;
+    top: 10%;
+    right: 2%;
+}
+.create-pop b {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+.create-pop p {
+    font-size: 18px;
+}
+#title-set, #desc-set, #date-set, #time-set {
+    width: 100%;
+    font-size: 16px;
+    height: 38px;
+}
+.create-pop button {
+    border: none;
+    border-radius: 24px;
+    font-size: 22px;
+    padding: 12px;
+    margin-top: 12px;
+    width: 100%;
+}
