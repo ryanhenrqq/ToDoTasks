@@ -26,12 +26,11 @@ function updatePg() {
 }
 
 function verifyNoteExistence() {
+    
     const list = document.getElementById("today-list")
     if (list.querySelector(".task-object")) {
-        console.error("contem")
         localStorage.setItem("todotasks-note-status", 1)
     } else {
-        console.error("vazio")
         localStorage.setItem("todotasks-note-status", 0)
         updatePg()
     }

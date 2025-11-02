@@ -218,3 +218,25 @@ header {
     justify-content: center;
     align-items: center;
 }
+
+@media (max-width: 768px) {
+    h1 {
+        display: none;
+    }
+    a {
+        width: 60%;
+    }
+    .all-done-main b {
+        width: 70%;
+    }
+    .create-pop {
+        width: 60%;
+    }
+    .list-flex-hor {
+        font-size: 2.8rem;
+        flex-direction: column;
+    }
+    #save-changes-new-popup {
+        flex-direction: column;
+    }
+}
