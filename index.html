@@ -16,19 +16,20 @@
             </div>
             <div class="right-side">
                 <button><img src="./components/res/icon/more.svg" alt="Adicionar" id="popup-add-note"></button>
+                <button><img src="./components/res/icon/clear.png" alt="Limpar Lista" id="clear-all"></button>
             </div>
         </header>
-        <main class="all-done-main" style="display: none;">
+        <main class="all-done-main" id="all-done-main" style="display: none;">
             <img src="./components/res/icon/ok-symbol.svg" alt="Tudo Feito">
             <b>Todas as suas tarefas estão feitas! Adicione uma nova tarefa no +.</b>
         </main>
-        <main class="tasker-listing">
-            <div class="today-list pad-hor">
+        <main class="tasker-listing" id="tasker-listing">
+            <div class="today-list pad-hor" id="today-list">
                 <div class="title-list"><img src="./components/res/icon/hourglass.svg" alt="Ampulheta">Para Hoje</div>
                 <div class="task-object">
                     <div class="left-side-tsk-obj">
                         <b>Titulo da tarefa</b>
-                        <i>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos, est! Ipsum eos atque ducimus libero. Beatae rerum aliquid voluptates dolor provident ullam. Repudiandae inventore delectus architecto nesciunt autem quod harum.</i>
+                        <i>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos, est! Ipsum eos atque ducimus li</i>
                     </div>
                     <div class="right-side-tsk-obj">
                         <div class="rsto-txt">
@@ -36,7 +37,7 @@
                             <i>29/07/2025</i>
                         </div>
                         <img src="./components/res/icon/timer.svg" alt="Temporizador">
-                        <img src="./components/res/icon/trash.svg" alt="Lixeira">
+                        <img src="./components/res/icon/trash.svg" class="trash-ind-note" alt="Lixeira">
                     </div>
                 </div>
             </div>
@@ -52,7 +53,7 @@
         </main>
     </div>
     <div class="create-pop" id="create-pop">
-        <div class="flex-hor pup-title">
+        <div class="flex-hor pup-title" id="normal-title-popup-div">
             <b>Criar nova Tarefa</b>
             <button id="close-new-popup">Cancelar</button>
         </div>
@@ -63,11 +64,11 @@
         </div>
         <div class="list-flex-hor">
             <p>Titulo</p>
-            <input type="text" id="title-set">
+            <input type="text" id="title-set" maxlength="40">
         </div>
         <div class="list-flex-hor">
             <p>Descrição</p>
-            <input type="text" id="desc-set">
+            <textarea id="desc-set" maxlength="120"></textarea>
         </div>
         <div class="list-flex-hor">
             <p>Data</p>
@@ -77,6 +78,7 @@
         <input type="time" name="time-set" id="time-set" style="display: none;">
         <button id="button-set">Criar</button>
     </div>
+    <script src="./components/script/pg-note-updater.js"></script>
     <script src="./components/script/popup-purpose.js"></script>
 </body>
 </html>
