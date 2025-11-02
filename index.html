@@ -15,7 +15,7 @@
                 <h1>To-Do Tasks</h1>
             </div>
             <div class="right-side">
-                <button><img src="./components/res/icon/more.svg" alt="Adicionar"></button>
+                <button><img src="./components/res/icon/more.svg" alt="Adicionar" id="popup-add-note"></button>
             </div>
         </header>
         <main class="all-done-main" style="display: none;">
@@ -51,17 +51,32 @@
             </div>
         </main>
     </div>
-    <div class="create-pop">
-        <b>Criar nova Tarefa</b>
-        <p>Titulo</p>
-        <input type="text" id="title-set">
-        <p>Descrição</p>
-        <input type="text" id="desc-set">
-        <p>Data</p>
-        <input type="date" name="date-set" id="date-set">
+    <div class="create-pop" id="create-pop">
+        <div class="flex-hor pup-title">
+            <b>Criar nova Tarefa</b>
+            <button id="close-new-popup">Cancelar</button>
+        </div>
+        <div class="list-flex-hor" id="save-changes-new-popup" style="display: none;">
+            <b>Descartar?</b>
+            <button id="save-option-yes">Sim</button>
+            <button id="save-option-no">Não</button>
+        </div>
+        <div class="list-flex-hor">
+            <p>Titulo</p>
+            <input type="text" id="title-set">
+        </div>
+        <div class="list-flex-hor">
+            <p>Descrição</p>
+            <input type="text" id="desc-set">
+        </div>
+        <div class="list-flex-hor">
+            <p>Data</p>
+            <input type="date" name="date-set" id="date-set">
+        </div>
         <p><input type="checkbox" name="activate-time" id="activate-time">Horario</p>
         <input type="time" name="time-set" id="time-set" style="display: none;">
         <button id="button-set">Criar</button>
     </div>
+    <script src="./components/script/popup-purpose.js"></script>
 </body>
 </html>
