@@ -181,6 +181,7 @@ function callNewNote() {
 
     clearInputs()
     hidePop()
+    updatePg()
 
     if (localStorage.getItem("todotasks-note-status") == 0) {
         localStorage.setItem("todotasks-note-status", 1)

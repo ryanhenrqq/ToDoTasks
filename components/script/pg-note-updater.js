@@ -36,11 +36,6 @@ function verifyNoteExistence() {
 }
 
 function buttonUpdater() {
-    const tskVerify = document.querySelector(".task-object")
-    if (!tskVerify) {
-        print("Não há nenhuma nota criada disponível!")
-        return
-    }
     const indvDelete = document.querySelectorAll(".trash-ind-note")
     indvDelete.forEach((btn, index) => {
         btn.addEventListener("click", () => {
