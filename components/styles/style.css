@@ -105,6 +105,7 @@ header {
     background-color: #ffed9c;
     padding: 14px;
     border-radius: 24px;
+    gap: 12px;
 }
 .left-side-tsk-obj {
     display: flex;

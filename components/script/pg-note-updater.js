@@ -26,7 +26,6 @@ function updatePg() {
 }
 
 function verifyNoteExistence() {
-    
     const list = document.getElementById("today-list")
     if (list.querySelector(".task-object")) {
         localStorage.setItem("todotasks-note-status", 1)
@@ -37,6 +36,11 @@ function verifyNoteExistence() {
 }
 
 function buttonUpdater() {
+    const tskVerify = document.querySelector(".task-object")
+    if (!tskVerify) {
+        print("Não há nenhuma nota criada disponível!")
+        return
+    }
     const indvDelete = document.querySelectorAll(".trash-ind-note")
     indvDelete.forEach((btn, index) => {
         btn.addEventListener("click", () => {
