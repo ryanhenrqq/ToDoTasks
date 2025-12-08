@@ -4,14 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./res/icon/task.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/style.css">
     <title>To-Do Tasks</title>
+    <style>
+        .pad-hor {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            font-size: 3rem;
+            padding: 12px;
+            border-radius: 20px;
+            gap: 16px;
+            transition: transform 0.3s linear;
+        }
+        .pad-hor:hover {
+            background-color: #ffe367;
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <h1>Pagina ainda não está pronta, falta alguns detalhes!</h1>
-    <b>Voce ainda pode enviar uma mensagem por aqui:</b><br>
-    <a href="#">rhs.sites.8116@gmail.com</a>
-    <a href="#">ryanh8116@proton.me</a>
-    <p>Instagram:</p><a href="#">rhs.code</a>
-    
+<div class="background-content" id="background-content">
+        <header>
+            <div class="left-side" onclick="backHome()">
+                <img src="../components/res/icon/task.svg" alt="Tarefas">
+                <h1>To-Do Tasks</h1>
+            </div>
+            <div class="right-side">
+                <button><img src="../components/res/icon/left-arrow.png" alt="Voltar" onclick="backHome()"></button>
+            </div>
+        </header>
+        <main class="tasker-listing" id="tasker-listing">
+            <b>Você pode entrar em contato diretamente comigo apenas clicando em qualquer um bos botões abaixo!</b>
+            <div class="pad-hor" onclick="sendMail()">
+                <div class="title-list"><img src="../components/res/icon/email.png" alt="Ampulheta"></div>
+                <b>E-Mail</b>
+            </div>
+            <div class="pad-hor" onclick="sendtoIg()">
+                <div class="title-list"><img src="../components/res/icon/instagram.png" alt="Ampulheta"></div>
+                <b>Instagram</b>
+            </div>
+        </main>
+    </div>
+    <script>
+        function backHome() {
+            window.location.replace("../index.html")
+        }
+        function sendMail() {
+            window.location.href = "mailto:rhs.sites.8116@gmail.com?subject=Contato%20via%20ToDoTasks"
+        }
+        function sendtoIg() {
+            window.location.href = "https://www.instagram.com/rhs.code/"
+        }
+    </script>
 </body>
 </html>
