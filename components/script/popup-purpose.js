@@ -160,6 +160,7 @@ function callNewNote() {
     const desc = document.getElementById("desc-set")
     const date = document.getElementById("date-set")
     const pagelist = document.getElementById("today-list")
+    let classTimer = checkIfDate(date.value)
 
     let textAppender = `    
     <div class="task-object">         
@@ -169,7 +170,7 @@ function callNewNote() {
     </div>
     <div class="right-side-tsk-obj">
         <div class="rsto-txt">
-            <b>Hoje</b>
+            <b>${classTimer}</b>
             <i>${date.value}</i>
         </div>
         <img src="./components/res/icon/timer.svg" alt="Temporizador">
@@ -186,6 +187,46 @@ function callNewNote() {
     if (localStorage.getItem("todotasks-note-status") == 0) {
         localStorage.setItem("todotasks-note-status", 1)
         updatePg()
+    }
+}
+
+function checkIfDate(dater) {
+    const dt = new Date()
+    let todayDay = dt.getDay()
+    let todayMon = dt.getMonth()
+    let todayY = dt.getFullYear()
+    console.log(todayDay, todayMon, todayY)
+    let dataAtualComparacao = new Date(todayY, todayMon, todayDay)
+
+    /* Continuar desse ponto: Problema de conversão das datas -> erro NaN na linha 205 */
+
+    const difer = dataAtualComparacao - dater
+    const dayDiffer = difer / (100 * 60 * 60 * 24)
+    console.log(dayDiffer) /* Erro NaN: Precisa calcularo numero exato de dias */
+
+    if (todayDay) {
+        return "Hoje"
+    } else if (todayDay != "abobora") {
+        const difference = Number(todayDay)
+        const sameMon = Number(todayMon)
+
+        /* Datas Anteriores */
+        if (difference == 1) {
+            return "Ontem"
+        } else if (difference > 1 && difference <= 7) {
+            return "Semana Passada"
+        } else if (difference > 7) {
+            return "Há mais de semanas atrás"
+        }
+
+        /* Datas Futuras */
+        if (difference == -1) {
+            return "Amanhã"
+        } else if (difference > -1 && difference <= -7 && sameMon == 0) {
+            return "Esta semana"
+        } else if (difference > -7 && difference <= 30 && sameMon == 0) {
+            return "Este Mês"
+        }
     }
 }
 
