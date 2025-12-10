@@ -164,8 +164,8 @@ function callNewNote() {
     let textAppender = `    
     <div class="task-object">         
     <div class="left-side-tsk-obj">
-        <b>${titulo.value}</b>
-        <i>${desc.value}</i>
+        <b class="three-dotter-set">${titulo.value}</b>
+        <i class="three-dotter-set">${desc.value}</i>
     </div>
     <div class="right-side-tsk-obj">
         <div class="rsto-txt">

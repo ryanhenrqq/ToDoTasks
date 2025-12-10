@@ -77,9 +77,8 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 90%;
     height: 100%;
-    padding: 24px;
     gap: 18px;
 }
 .title-list {
@@ -105,13 +104,14 @@ header {
     background-color: #ffed9c;
     padding: 14px;
     border-radius: 24px;
+    width: 100%;
     gap: 12px;
 }
 .left-side-tsk-obj {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 90%;
+    width: 70%;
 }
 .right-side-tsk-obj {
     display: flex;
@@ -123,7 +123,7 @@ header {
 .left-side-tsk-obj i {
     font-size: 19px;
 }
-.left-side-tsk-obj b, .left-side-tsk-obj i {
+.three-dotter-set {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -179,7 +179,7 @@ header {
     height: 6rem;
     resize: none;
 }
-.create-pop button {
+.pup-buttons {
     border: none;
     border-radius: 24px;
     font-size: 22px;
