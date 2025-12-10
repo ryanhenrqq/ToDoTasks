@@ -135,9 +135,12 @@ function hideAdditionalMenu() {
 
 timeAddOpt.addEventListener("change", function(){
     if (this.checked) {
+        alert("Essa função foi desativada temporariamente, Aguarde pelas futuras versões.")
+        this.checked = false
+        /*
         setHour()
         const timemenu = document.getElementById("time-set")
-        timemenu.style.display = "block"
+        timemenu.style.display = "block" */
     } else {
         const timemenu = document.getElementById("time-set")
         timemenu.value = ""
