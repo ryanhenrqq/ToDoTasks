@@ -40,7 +40,7 @@
                             <b>Hoje</b>
                             <i>29/07/2025</i>
                         </div>
-                        <img src="./components/res/icon/timer.svg" alt="Temporizador">
+                        <img src="./components/res/icon/timer.svg" class="time-ch-note" alt="Temporizador">
                         <img src="./components/res/icon/trash.svg" class="trash-ind-note" alt="Lixeira">
                     </div>
                 </div>
@@ -85,7 +85,19 @@
         <input type="time" name="time-set" id="time-set" style="display: none;">
         <button id="button-set" class="pup-buttons">Criar</button>
     </div>
+    <div class="create-pop-date" id="date-change-pop">
+        <div class="flex-hor pup-title" id="normal-title-popup-div">
+            <b>Alterar Data</b>
+            <button id="close-new-popup-date-ch">Cancelar</button>
+        </div>
+        <div class="list-flex-hor">
+            <p>Data</p>
+            <input type="date" name="date-set" id="date-set-ch">
+        </div>
+        <button id="button-date-ch-set" class="pup-buttons" disabled>Alterar</button>
+    </div>
     <script src="./components/script/pg-note-updater.js"></script>
     <script src="./components/script/popup-purpose.js"></script>
+    <script src="./components/script/date-changer.js"></script>
 </body>
 </html>

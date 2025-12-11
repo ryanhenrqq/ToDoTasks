@@ -21,11 +21,9 @@ popupShowupBtn.addEventListener("click", function() {
         autoSetDate()
         const bodyblur = document.getElementById("background-content")
         const popupAllDiv = document.getElementById("create-pop")
-
         bodyblur.style.filter = "blur(6px)"
         bodyblur.style.pointerEvents = "none"
         popupAllDiv.style.display = "flex"
-
         isPopupShowing = true
     }
 })
@@ -33,7 +31,6 @@ popupShowupBtn.addEventListener("click", function() {
 function hidePop() {
     const bodyblur = document.getElementById("background-content")
     const popupAllDiv = document.getElementById("create-pop")
-
     if (verifyInputs()) {
         doNotSave = true
         askConfirmationAdditionalMenu()
@@ -41,13 +38,9 @@ function hidePop() {
     } else {
         doNotSave = false
     }
-
-    
-
     bodyblur.style.filter = "none"
     bodyblur.style.pointerEvents = "auto"
     popupAllDiv.style.display = "none"
-
     isPopupShowing = false
 }
 
@@ -135,7 +128,7 @@ function hideAdditionalMenu() {
 
 timeAddOpt.addEventListener("change", function(){
     if (this.checked) {
-        alert("Essa função foi desativada temporariamente, Aguarde pelas futuras versões.")
+        alert("Essa função foi desativada temporariamente, tente mais tarde após uma atualização nova.")
         this.checked = false
         /*
         setHour()
@@ -176,7 +169,7 @@ function callNewNote() {
             <b>${classTimer}</b>
             <i>${date.value}</i>
         </div>
-        <img src="./components/res/icon/timer.svg" alt="Temporizador">
+        <img src="./components/res/icon/timer.svg" class="timer-ch-note" alt="Temporizador">
         <img src="./components/res/icon/trash.svg" alt="Lixeira" class="trash-ind-note">
     </div>
     </div>

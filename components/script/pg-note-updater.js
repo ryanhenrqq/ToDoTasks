@@ -22,7 +22,6 @@ function updatePg() {
         notePg.style.display = "flex"
         blankPg.style.display = "none"
     }
-    console.log(storageEngineStatus)
 }
 
 function verifyNoteExistence() {
@@ -37,24 +36,37 @@ function verifyNoteExistence() {
 
 function buttonUpdater() {
     const indvDelete = document.querySelectorAll(".trash-ind-note")
+    const indvTimerch = document.querySelectorAll(".timer-ch-note")
     indvDelete.forEach((btn, index) => {
         btn.addEventListener("click", () => {
             const tgt = document.getElementsByClassName("task-object")[index]
             tgt.remove()
         })
     })
+    indvTimerch.forEach((btn, index) => {
+        btn.addEventListener("click", function() {
+            changeDatePopupFunc(index)
+        })
+    })
 }
 
-setInterval(verifyNoteExistence, 1000)
-setInterval(buttonUpdater, 1000)
+function changeDatePopupFunc(i) {
+    const popupper = document.getElementById("date-change-pop")
+    const tgt = document.getElementsByClassName("task-object")
+    [i]
 
+    popupper.style.display = "flex"
+}
+
+setInterval(verifyNoteExistence, 400)
+setInterval(buttonUpdater, 400)
+
+/* Pequena gambiarra até terminar funcionalidade de identificar datas */
 clearbtn.addEventListener("click", function() {
     const todayList = document.getElementById("today-list")
     todayList.innerHTML = `<div class="title-list"><img src="./components/res/icon/hourglass.svg" alt="Ampulheta">Para Hoje</div>`
     localStorage.setItem("todotasks-note-status", 0)
     updatePg()
 })
-
-
 
 document.addEventListener("DOMContentLoaded", updatePg)
